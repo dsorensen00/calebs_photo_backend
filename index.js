@@ -43,6 +43,10 @@ app.delete('/admin', async (req, res) => {
     res.status(200).send(results)
 } )
 
+app.patch('/admin', async (req, res)=>{
+    const results = await users.update(req.params)
+    res.status(200).send(results)
+})
 
 
 
