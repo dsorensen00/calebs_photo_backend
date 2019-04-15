@@ -26,7 +26,7 @@ app.post('/', async (req, res) => {
 //declaring a constant results to call our result of the post later down,
 //we then await our function to take users, which is our variable db ----(monk connecting to our database)
 //getting our collection(our array of objects) we then go to insert into our array whatever our 
-//user is requesting. the req.body is just passing in our request's (our post request) body 
+//user is requesting. the req.bo6dy is just passing in our request's (our post request) body 
     res.status(200).send(results)
 //this line is then just saying for resolution, our status will be 200 and then we want to send
 //our results back to the UI :)
@@ -39,7 +39,7 @@ app.get('/admin', async (req, res) => {
 
 
 app.delete('/admin', async (req, res) => {
-    const results = await users.remove(req.params)
+    const results = await users.remove(req.body)
     res.status(200).send(results)
 } )
 
