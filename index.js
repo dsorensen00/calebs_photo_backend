@@ -44,7 +44,7 @@ app.delete('/admin', async (req, res) => {
 } )
 
 app.patch('/admin', async (req, res)=>{
-    const results = await users.update(req.params)
+    const results = await users.findOneAndUpdate(req.body._id, {$set: req.body})
     res.status(200).send(results)
 })
 
